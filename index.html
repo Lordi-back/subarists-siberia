@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Субаристы Сибири — сервис по ремонту Subaru</title>
+    <meta name="description" content="Сервис по ремонту Subaru. Оппозитные моторы, вариаторы, полный привод. Честные цены на работу, запчасти по VIN.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <span class="logo__text">СУБАРИСТЫ</span>
+                    <span class="logo__text logo__text--yellow">СИБИРИ</span>
+                </div>
+                <div class="header__contacts">
+                    <a href="tel:+70000000000" class="header__phone">+7 (000) 000-00-00</a>
+                    <a href="#" class="btn btn--whatsapp">Написать в WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero__title">СЕРВИС ПО РЕМОНТУ SUBARU</h1>
+            <p class="hero__subtitle">Оппозитные моторы • Вариаторы Lineartronic • Полный привод</p>
+            <p class="hero__desc">Честные цены на работу. Запчасти — строго по VIN.<br>Не предлагаем «аналоги» без вашего ведома.</p>
+            <div class="hero__buttons">
+                <a href="#prices" class="btn btn--primary">Смотреть цены</a>
+                <a href="#schedule" class="btn btn--outline">Свободные окна</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стоимость работ -->
+    <section id="prices" class="prices">
+        <div class="container">
+            <h2 class="section-title">Стоимость работ</h2>
+            <p class="section-subtitle">Цены фиксированные — запчасти подбираем по VIN-номеру вашего Subaru</p>
+            
+            <!-- Табы категорий -->
+            <div class="tabs">
+                <button class="tab tab--active" data-category="engine">Двигатель</button>
+                <button class="tab" data-category="transmission">Трансмиссия</button>
+                <button class="tab" data-category="suspension">Ходовая</button>
+                <button class="tab" data-category="maintenance">ТО</button>
+            </div>
+
+            <!-- Таблица цен -->
+            <div class="table-wrapper">
+                <table class="price-table" id="priceTable">
+                    <thead>
+                        <tr>
+                            <th>Наименование работы</th>
+                            <th>Цена за работу</th>
+                            <th>Время</th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+                        <!-- Заполняется из JSON -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="disclaimer">
+                ⚠️ Цены указаны только за работу. Запчасти рассчитываем индивидуально по VIN. 
+                Стоимость деталей плавающая и зависит от рынка. Окончательную смету согласовываем до начала.
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2 class="section-title">Запись на неделю</h2>
+            <p class="section-subtitle">Обновляем каждое воскресенье. Звоните, чтобы занять удобное время.</p>
+            
+            <div class="schedule-grid" id="scheduleGrid">
+                <!-- Заполняется из JSON -->
+            </div>
+
+            <p class="schedule__note">🔧 Нужна крупная работа (двигатель, вариатор)? Планируем отдельно — звоните заранее.</p>
+        </div>
+    </section>
+
+    <!-- Мастера -->
+    <section class="masters">
+        <div class="container">
+            <h2 class="section-title">Наши мастера</h2>
+            <div class="masters-grid" id="mastersGrid">
+                <!-- Заполняется из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Этапы работы -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">Как мы работаем</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step__num">01</div>
+                    <h3>Звонок или сообщение</h3>
+                    <p>Описываете симптомы. Горит Check Engine? Дёргается вариатор?</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">02</div>
+                    <h3>VIN и подбор запчастей</h3>
+                    <p>Бьём по VIN, смотрим комплектацию. Считаем точную стоимость деталей.</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">03</div>
+                    <h3>Смета и запись</h3>
+                    <p>Цена работы + цена запчастей. Записываем на выбранный день.</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">04</div>
+                    <h3>Ремонт с фотоотчётом</h3>
+                    <p>Присылаем фото в WhatsApp. Если что-то ещё — сначала звонок и согласование.</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">05</div>
+                    <h3>Выдача и гарантия</h3>
+                    <p>Отдаём машину с гарантией на работу. Кофе в подарок!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы субаристов</h2>
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Заполняется из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts">
+        <div class="container">
+            <h2 class="section-title">Как добраться</h2>
+            <div class="contacts__inner">
+                <div class="contacts__info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Адрес:</strong>
+                            <p>г. [Город], ул. [Улица], д. [Номер]</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Телефон:</strong>
+                            <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Режим работы:</strong>
+                            <p>Пн–Пт: 9:00–19:00<br>Сб: 10:00–16:00<br>Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <!-- Здесь будет карта -->
+                    <div class="map-placeholder">
+                        <p>Яндекс.Карта</p>
+                        <span>(добавим позже)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="logo">
+                    <span class="logo__text">СУБАРИСТЫ</span>
+                    <span class="logo__text logo__text--yellow">СИБИРИ</span>
+                </div>
+                <p class="footer__copy">© 2026 Субаристы Сибири. Все права защищены.</p>
+                <p class="footer__city">[Город]</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
