@@ -138,7 +138,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== HEADER ===== */
 .header {
-    background: var(--blue-dark); padding: 16px 0;
+    background: var(--blue-dark); padding: 12px 0;
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     animation: slideDown 0.5s ease;
@@ -146,9 +146,27 @@ a { text-decoration: none; color: inherit; }
 .header__inner {
     display: flex; justify-content: space-between; align-items: center; gap: 20px;
 }
-.logo { display: flex; flex-direction: column; line-height: 1.1; }
-.logo__text { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: 2px; }
-.logo__text--yellow { color: var(--yellow); font-size: 18px; letter-spacing: 3px; }
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.logo__img {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.logo__img:hover {
+    transform: scale(1.05);
+}
+
+/* Текстовый логотип (если нет картинки) */
+.logo__text { font-size: 18px; font-weight: 800; color: var(--white); letter-spacing: 2px; }
+.logo__text--yellow { color: var(--yellow); font-size: 16px; letter-spacing: 3px; }
+
 .header__nav { display: flex; gap: 24px; }
 .header__nav a {
     color: rgba(255,255,255,0.8); font-weight: 600; font-size: 14px;
@@ -160,27 +178,6 @@ a { text-decoration: none; color: inherit; }
     color: var(--white); font-size: 18px; font-weight: 700; transition: color 0.3s;
 }
 .header__phone:hover { color: var(--yellow); }
-
-
-/* ===== ЛОГОТИП ===== */
-.logo__img {
-    height: 50px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-.logo__img:hover {
-    transform: scale(1.05);
-}
-.logo__img--small {
-    height: 36px;
-}
-
-/* Заменяем текстовый логотип на изображение */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 
 /* ===== HERO ===== */
 .hero {
@@ -380,6 +377,11 @@ a { text-decoration: none; color: inherit; }
 .footer__copy { color: rgba(255,255,255,0.7); font-size: 14px; }
 .footer__city { color: var(--yellow); font-weight: 600; font-size: 14px; }
 
+/* Логотип в футере поменьше */
+.footer .logo__img {
+    height: 32px;
+}
+
 /* ===== СКРОЛЛБАР ===== */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--gray-100); }
@@ -394,8 +396,9 @@ a { text-decoration: none; color: inherit; }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .header { padding: 12px 0; }
-    .header__inner { flex-direction: column; gap: 12px; text-align: center; }
+    .header { padding: 10px 0; }
+    .header__inner { flex-direction: column; gap: 10px; text-align: center; }
+    .logo__img { height: 32px; }
     .header__nav { order: 2; }
     .header__contacts { flex-direction: column; width: 100%; gap: 8px; }
     .btn--whatsapp { width: 100%; text-align: center; }
@@ -417,6 +420,7 @@ a { text-decoration: none; color: inherit; }
     .contacts__inner { grid-template-columns: 1fr; gap: 24px; }
     .contacts__map iframe { height: 250px; }
     .footer__inner { flex-direction: column; text-align: center; }
+    .footer .logo__img { height: 28px; }
 }
 @media (max-width: 480px) {
     .hero { padding: 40px 0; }
@@ -432,4 +436,5 @@ a { text-decoration: none; color: inherit; }
     .schedule-day__name, .schedule-day__date { margin-bottom: 0; }
     .master-card__avatar { height: 160px; font-size: 40px; }
     .review-card { padding: 20px; }
+    .logo__img { height: 28px; }
 }
