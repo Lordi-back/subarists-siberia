@@ -161,6 +161,27 @@ a { text-decoration: none; color: inherit; }
 }
 .header__phone:hover { color: var(--yellow); }
 
+
+/* ===== ЛОГОТИП ===== */
+.logo__img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.logo__img:hover {
+    transform: scale(1.05);
+}
+.logo__img--small {
+    height: 36px;
+}
+
+/* Заменяем текстовый логотип на изображение */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
 /* ===== HERO ===== */
 .hero {
     background: linear-gradient(135deg, #060e1f 0%, var(--blue-dark) 30%, var(--blue) 60%, #1a4a7a 100%);
