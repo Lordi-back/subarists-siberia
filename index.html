@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Субаристы Сибири — сервис по ремонту Subaru</title>
-    <meta name="description" content="Сервис по ремонту Subaru. Оппозитные моторы, вариаторы, полный привод. Честные цены на работу, запчасти по VIN.">
+    <meta name="description" content="Сервис по ремонту Subaru в Сибири. Оппозитные моторы, вариаторы Lineartronic, полный привод. Честные цены на работу, запчасти по VIN.">
+    <meta name="theme-color" content="#0a1e3d">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Загрузочный экран -->
-<div class="loader">
-    <div class="loader__icon"></div>
-    <span class="loader__text">СУБАРИСТЫ СИБИРИ</span>
-</div>
-    
+    <!-- Прелоадер -->
+    <div class="loader">
+        <div class="loader__icon"></div>
+        <span class="loader__text">СУБАРИСТЫ СИБИРИ</span>
+    </div>
+
     <!-- Шапка -->
     <header class="header">
         <div class="container">
@@ -26,44 +26,46 @@
                     <span class="logo__text">СУБАРИСТЫ</span>
                     <span class="logo__text logo__text--yellow">СИБИРИ</span>
                 </div>
+                <nav class="header__nav">
+                    <a href="/">Главная</a>
+                    <a href="parts.html">🔍 Запчасти</a>
+                </nav>
                 <div class="header__contacts">
                     <a href="tel:+70000000000" class="header__phone">+7 (000) 000-00-00</a>
-                    <a href="#" class="btn btn--whatsapp">Написать в WhatsApp</a>
+                    <a href="https://wa.me/70000000000" target="_blank" class="btn btn--whatsapp">📱 WhatsApp</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Главный экран -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <h1 class="hero__title">СЕРВИС ПО РЕМОНТУ SUBARU</h1>
             <p class="hero__subtitle">Оппозитные моторы • Вариаторы Lineartronic • Полный привод</p>
             <p class="hero__desc">Честные цены на работу. Запчасти — строго по VIN.<br>Не предлагаем «аналоги» без вашего ведома.</p>
             <div class="hero__buttons">
-                <a href="#prices" class="btn btn--primary">Смотреть цены</a>
-                <a href="#schedule" class="btn btn--outline">Свободные окна</a>
+                <a href="#prices" class="btn btn--primary">💰 Смотреть цены</a>
+                <a href="#schedule" class="btn btn--outline">📅 Свободные окна</a>
             </div>
         </div>
     </section>
 
-    <!-- Стоимость работ -->
+    <!-- Цены -->
     <section id="prices" class="prices">
         <div class="container">
             <h2 class="section-title">Стоимость работ</h2>
             <p class="section-subtitle">Цены фиксированные — запчасти подбираем по VIN-номеру вашего Subaru</p>
             
-            <!-- Табы категорий -->
-            <div class="tabs">
-                <button class="tab tab--active" data-category="engine">Двигатель</button>
-                <button class="tab" data-category="transmission">Трансмиссия</button>
-                <button class="tab" data-category="suspension">Ходовая</button>
-                <button class="tab" data-category="maintenance">ТО</button>
+            <div class="tabs" id="priceTabs">
+                <button class="tab tab--active" data-category="engine">⚙️ Двигатель</button>
+                <button class="tab" data-category="transmission">🔄 Трансмиссия</button>
+                <button class="tab" data-category="suspension">🛞 Ходовая</button>
+                <button class="tab" data-category="maintenance">🔧 ТО</button>
             </div>
 
-            <!-- Таблица цен -->
             <div class="table-wrapper">
-                <table class="price-table" id="priceTable">
+                <table class="price-table">
                     <thead>
                         <tr>
                             <th>Наименование работы</th>
@@ -71,9 +73,7 @@
                             <th>Время</th>
                         </tr>
                     </thead>
-                    <tbody id="priceTableBody">
-                        <!-- Заполняется из JSON -->
-                    </tbody>
+                    <tbody id="priceTableBody"></tbody>
                 </table>
             </div>
 
@@ -88,12 +88,8 @@
     <section id="schedule" class="schedule">
         <div class="container">
             <h2 class="section-title">Запись на неделю</h2>
-            <p class="section-subtitle">Обновляем каждое воскресенье. Звоните, чтобы занять удобное время.</p>
-            
-            <div class="schedule-grid" id="scheduleGrid">
-                <!-- Заполняется из JSON -->
-            </div>
-
+            <p class="section-subtitle">Обновляем каждое воскресенье. Звоните, чтобы занять удобное время</p>
+            <div class="schedule-grid" id="scheduleGrid"></div>
             <p class="schedule__note">🔧 Нужна крупная работа (двигатель, вариатор)? Планируем отдельно — звоните заранее.</p>
         </div>
     </section>
@@ -102,13 +98,11 @@
     <section class="masters">
         <div class="container">
             <h2 class="section-title">Наши мастера</h2>
-            <div class="masters-grid" id="mastersGrid">
-                <!-- Заполняется из JSON -->
-            </div>
+            <div class="masters-grid" id="mastersGrid"></div>
         </div>
     </section>
 
-    <!-- Этапы работы -->
+    <!-- Этапы -->
     <section class="steps">
         <div class="container">
             <h2 class="section-title">Как мы работаем</h2>
@@ -146,9 +140,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="section-title">Отзывы субаристов</h2>
-            <div class="reviews-grid" id="reviewsGrid">
-                <!-- Заполняется из JSON -->
-            </div>
+            <div class="reviews-grid" id="reviewsGrid"></div>
         </div>
     </section>
 
@@ -181,11 +173,14 @@
                     </div>
                 </div>
                 <div class="contacts__map">
-                    <!-- Здесь будет карта -->
-                    <div class="map-placeholder">
-                        <p>Яндекс.Карта</p>
-                        <span>(добавим позже)</span>
-                    </div>
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?ll=82.920430,55.030200&z=12&pt=82.920430,55.030200,pm2rdl" 
+                        width="100%" 
+                        height="350" 
+                        frameborder="0" 
+                        style="border-radius: 12px;"
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -205,6 +200,7 @@
         </div>
     </footer>
 
+    <script src="js/data.json"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
