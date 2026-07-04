@@ -20,6 +20,7 @@
     --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+
 /* ===== АНИМАЦИИ ===== */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
