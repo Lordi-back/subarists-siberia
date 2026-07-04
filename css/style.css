@@ -154,7 +154,7 @@ a { text-decoration: none; color: inherit; }
     flex-shrink: 0;
 }
 .logo__img {
-    height: 28px;
+    height: 40px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
