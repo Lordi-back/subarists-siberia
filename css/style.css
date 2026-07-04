@@ -138,13 +138,13 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== HEADER ===== */
 .header {
-    background: var(--blue-dark); padding: 12px 0;
+    background: var(--blue-dark); padding: 10px 0;
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     animation: slideDown 0.5s ease;
 }
 .header__inner {
-    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
 }
 
 /* Логотип */
@@ -154,7 +154,7 @@ a { text-decoration: none; color: inherit; }
     flex-shrink: 0;
 }
 .logo__img {
-    height: 40px;
+    height: 28px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
@@ -163,19 +163,21 @@ a { text-decoration: none; color: inherit; }
     transform: scale(1.05);
 }
 
-/* Текстовый логотип (если нет картинки) */
+/* Текстовый логотип (запасной) */
 .logo__text { font-size: 18px; font-weight: 800; color: var(--white); letter-spacing: 2px; }
 .logo__text--yellow { color: var(--yellow); font-size: 16px; letter-spacing: 3px; }
 
-.header__nav { display: flex; gap: 24px; }
+.header__nav { display: flex; gap: 20px; }
 .header__nav a {
-    color: rgba(255,255,255,0.8); font-weight: 600; font-size: 14px;
+    color: rgba(255,255,255,0.8); font-weight: 600; font-size: 13px;
     transition: color 0.3s; padding: 4px 0; border-bottom: 2px solid transparent;
+    white-space: nowrap;
 }
 .header__nav a:hover { color: var(--yellow); border-bottom-color: var(--yellow); }
-.header__contacts { display: flex; align-items: center; gap: 16px; }
+.header__contacts { display: flex; align-items: center; gap: 12px; }
 .header__phone {
-    color: var(--white); font-size: 18px; font-weight: 700; transition: color 0.3s;
+    color: var(--white); font-size: 16px; font-weight: 700; transition: color 0.3s;
+    white-space: nowrap;
 }
 .header__phone:hover { color: var(--yellow); }
 
@@ -377,9 +379,9 @@ a { text-decoration: none; color: inherit; }
 .footer__copy { color: rgba(255,255,255,0.7); font-size: 14px; }
 .footer__city { color: var(--yellow); font-weight: 600; font-size: 14px; }
 
-/* Логотип в футере поменьше */
+/* Логотип в футере — ещё меньше */
 .footer .logo__img {
-    height: 32px;
+    height: 24px;
 }
 
 /* ===== СКРОЛЛБАР ===== */
@@ -396,12 +398,12 @@ a { text-decoration: none; color: inherit; }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .header { padding: 10px 0; }
-    .header__inner { flex-direction: column; gap: 10px; text-align: center; }
-    .logo__img { height: 32px; }
-    .header__nav { order: 2; }
-    .header__contacts { flex-direction: column; width: 100%; gap: 8px; }
-    .btn--whatsapp { width: 100%; text-align: center; }
+    .header { padding: 8px 0; }
+    .header__inner { flex-direction: column; gap: 8px; text-align: center; }
+    .logo__img { height: 24px; }
+    .header__nav { order: 2; gap: 16px; }
+    .header__contacts { flex-direction: column; width: 100%; gap: 6px; }
+    .btn--whatsapp { width: 100%; text-align: center; padding: 8px 16px; font-size: 13px; }
     .hero { padding: 60px 0; }
     .hero__title { font-size: 28px; letter-spacing: 1px; }
     .hero__subtitle { font-size: 14px; }
@@ -420,7 +422,7 @@ a { text-decoration: none; color: inherit; }
     .contacts__inner { grid-template-columns: 1fr; gap: 24px; }
     .contacts__map iframe { height: 250px; }
     .footer__inner { flex-direction: column; text-align: center; }
-    .footer .logo__img { height: 28px; }
+    .footer .logo__img { height: 20px; }
 }
 @media (max-width: 480px) {
     .hero { padding: 40px 0; }
@@ -436,5 +438,6 @@ a { text-decoration: none; color: inherit; }
     .schedule-day__name, .schedule-day__date { margin-bottom: 0; }
     .master-card__avatar { height: 160px; font-size: 40px; }
     .review-card { padding: 20px; }
-    .logo__img { height: 28px; }
+    .logo__img { height: 22px; }
+    .footer .logo__img { height: 18px; }
 }
