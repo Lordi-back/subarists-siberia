@@ -154,10 +154,13 @@ a { text-decoration: none; color: inherit; }
     flex-shrink: 0;
 }
 .logo__img {
-    height: 44px;
+    max-height: 60px;
+    height: auto;
     width: auto;
+    max-width: 210px;
     display: block;
     transition: transform 0.3s ease;
+    object-fit: contain;
 }
 .logo__img:hover {
     transform: scale(1.05);
@@ -381,7 +384,8 @@ a { text-decoration: none; color: inherit; }
 
 /* Логотип в футере */
 .footer .logo__img {
-    height: 36px;
+    max-height: 44px;
+    max-width: 180px;
 }
 
 /* ===== СКРОЛЛБАР ===== */
@@ -400,7 +404,12 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 768px) {
     .header { padding: 8px 0; }
     .header__inner { flex-direction: column; gap: 8px; text-align: center; }
-    .logo__img { height: 36px; }
+    
+    .logo__img {
+        max-height: 48px;
+        max-width: 170px;
+    }
+    
     .header__nav { order: 2; gap: 16px; }
     .header__contacts { flex-direction: column; width: 100%; gap: 6px; }
     .btn--whatsapp { width: 100%; text-align: center; padding: 8px 16px; font-size: 13px; }
@@ -422,7 +431,11 @@ a { text-decoration: none; color: inherit; }
     .contacts__inner { grid-template-columns: 1fr; gap: 24px; }
     .contacts__map iframe { height: 250px; }
     .footer__inner { flex-direction: column; text-align: center; }
-    .footer .logo__img { height: 30px; }
+    
+    .footer .logo__img {
+        max-height: 36px;
+        max-width: 140px;
+    }
 }
 @media (max-width: 480px) {
     .hero { padding: 40px 0; }
@@ -438,6 +451,14 @@ a { text-decoration: none; color: inherit; }
     .schedule-day__name, .schedule-day__date { margin-bottom: 0; }
     .master-card__avatar { height: 160px; font-size: 40px; }
     .review-card { padding: 20px; }
-    .logo__img { height: 32px; }
-    .footer .logo__img { height: 26px; }
+    
+    .logo__img {
+        max-height: 40px;
+        max-width: 150px;
+    }
+    
+    .footer .logo__img {
+        max-height: 30px;
+        max-width: 120px;
+    }
 }
